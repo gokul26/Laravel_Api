@@ -22,7 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('articles', 'ArticleController@index');
 
 // show Articles
-Route::get('articles/{id}', 'ArticleController@show');
+Route::get('article/{id}', 'ArticleController@show');
 
 // edit Articles
 Route::put('articles', 'ArticleController@store');
@@ -31,4 +31,4 @@ Route::put('articles', 'ArticleController@store');
 Route::post('articles', 'ArticleController@store');
 
 // delte Articles
-Route::delete('articles', 'ArticleController@destroy');
+Route::delete('articles/{id}', 'ArticleController@destroy');
